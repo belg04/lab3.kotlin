@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".NewActivity">
 
 
     <EditText
         android:id="@+id/height"
-        android:layout_width="417dp"
-        android:layout_height="73dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:hint="Начальная Высота"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,8 +24,8 @@
 
     <EditText
         android:id="@+id/speed"
-        android:layout_width="411dp"
-        android:layout_height="64dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/speed"
         android:layout_marginBottom="260dp"
         android:hint="Начальная скорость "
@@ -38,19 +39,19 @@
 
     <EditText
         android:id="@+id/time"
-        android:layout_width="398dp"
-        android:layout_height="49dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/speed"
-        android:layout_marginEnd="4dp"
         android:hint="Время"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/height"
         app:layout_constraintVertical_bias="0.122" />
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/downButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -65,33 +66,35 @@
         app:layout_constraintVertical_bias="0.02" />
 
 
-    //<Button
+    //
+
+    <Button
         android:id="@+id/calculate_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="112dp"
+        android:layout_height="62dp"
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speed"
-        app:layout_constraintVertical_bias="0.292" />
+        app:layout_constraintVertical_bias="0.466" />
 
     <TextView
         android:id="@+id/result_textview"
-        android:layout_width="145dp"
-        android:layout_height="59dp"
+        android:layout_width="150dp"
+        android:layout_height="61dp"
         android:layout_below="@id/calculate_button"
         android:layout_centerHorizontal="true"
         android:padding="16dp"
         android:text="Результат"
-        android:visibility="GONE"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speed"
-        app:layout_constraintVertical_bias="0.488" />
+        app:layout_constraintVertical_bias="0.462" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
